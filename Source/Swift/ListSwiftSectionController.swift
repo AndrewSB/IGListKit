@@ -210,7 +210,7 @@ open class ListSwiftSectionController<T: ListSwiftDiffable>: ListSectionControll
             rawCell = collectionContext.dequeueReusableCell(of: type, for: self, at: index)
         case let .nib(type, bundle):
             rawCell = collectionContext.dequeueReusableCell(withNibName: type, bundle: bundle, for: self, at: index)
-        case let .storyboard(type, bundle):
+        case let .storyboard(type, _):
             rawCell = collectionContext.dequeueReusableCellFromStoryboard(withIdentifier: type, for: self, at: index)
         }
 
